@@ -1,0 +1,11 @@
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteBase /country/
+RewriteRule ^(.*)$ index.php
+<FilesMatch ".(txt)$">
+ Order Allow,Deny
+ Deny from all
+ </FilesMatch>
